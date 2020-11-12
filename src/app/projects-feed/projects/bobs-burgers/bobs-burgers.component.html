@@ -1,0 +1,169 @@
+<!-- Spacer for project consistency -->
+<div class="spacer120"></div>
+
+<!-- Boostrap container class -->
+<div @fadeIn class="container shadow-lg">
+    <div class="header-wrapper shadow-lg">
+        <div class="logo">
+            <img src="/assets/images/bobs-burgers/logos/bobsburgers.logo.png" alt="Logo">
+        </div>
+
+        <div class="nav-menu">
+            <!-- Put href back when ready -->
+            <a >Home</a>
+            <a >Menu</a>
+            <a >Contact</a>
+        </div>
+    </div>
+
+    <!-- 10 pixel border for style -->
+    <div *ngIf="!mobile" class="border10 shadow-lg"></div>
+    
+    <!-- Slideshow start  -->
+    <ngb-carousel *ngIf="!mobile" 
+    [showNavigationIndicators]="true"
+    [showNavigationArrows]="true"
+    [pauseOnHover]="true"
+    [interval]="5000">
+        <ng-template ngbSlide>
+            <div class="img-wrapper">
+                <img class="img-fluid" [src]="images[0]" alt="First slide">
+            </div>
+        </ng-template>
+        <ng-template ngbSlide>
+            <div class="img-wrapper">
+                <img class="img-fluid" [src]="images[1]" alt="Second slide">
+            </div>
+        </ng-template>
+        <ng-template ngbSlide>
+            <div class="img-wrapper">
+                <img class="img-fluid" [src]="images[2]" alt="Third slide">
+            </div>
+        </ng-template>
+        <ng-template ngbSlide>
+            <div class="img-wrapper">
+                <img class="img-fluid" [src]="images[3]" alt="Fourth slide">
+            </div>
+        </ng-template>
+    </ngb-carousel>
+    <!-- Slideshow end  -->
+
+    <!-- 10 pixel border for style -->
+    <div class="border10 shadow-lg"></div>
+
+    <!-- First content container -->
+    <div class="top-content-container text-left">
+        <div class="content">
+            <h1 class="text-outline">You Haven't Tasted Burgers Like These Before</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                Non maxime odit excepturi esse illum asperiores corrupti, 
+                odio quis quia similique iure dolor. 
+                Obcaecati, repudiandae repellat dolorem eum vero soluta sapiente vel voluptas qui dolore. 
+                Laboriosam et non sit, placeat ipsa ullam quae repellendus laborum animi!</p>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. 
+                Dicta quas in consequuntur quos vel eligendi officiis enim dolorem unde deleniti aliquam fuga soluta, 
+                deserunt ipsum tempora eaque dolorum inventore est quod! Molestiae officiis porro error!</p>
+        </div>
+    </div>
+
+    <!-- 10 pixel border for style -->
+    <div class="border10 shadow-lg"></div>
+
+    <!-- Middle content container / portraits -->
+    <div class="content-header text-center shadow-lg">
+        <h1 class="text-outline">a family-owned restaurant</h1>
+        <div class="page-content-container">
+            <div class="parent-wrapper">
+                <div class="portrait"
+                id="bob">
+                    <h3 class="text-outline">Bob <br> Belcher</h3>
+                    <img class="shadow-lg bob" 
+                    (click)="maximize('bob')" 
+                    src="/assets/images/bobs-burgers/portraits/Bob_with_a_burger.png" 
+                    alt="Bob">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                        Dicta quas in consequuntur quos vel eligendi officiis enim dolorem unde deleniti aliquam fuga soluta. 
+                        Sed laboriosam vel voluptatibus nam officiis maiores!</p>
+                </div>     
+                <div class="portrait" 
+                id="linda">
+                    <h3 class="text-outline">Linda <br> Belcher</h3>
+                    <img class="shadow-lg linda" 
+                    (click)="maximize('linda')"
+                    src="/assets/images/bobs-burgers/portraits/Lindab.png" 
+                    alt="Linda">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
+                        Dolorem, quis numquam rerum laborum esse eos inventore sunt quia.
+                        Dicta quas in consequuntur quos vel eligendi officiis enim dolorem 
+                        unde deleniti aliquam fuga soluta</p>
+                </div>
+            </div>
+            <div class="child-wrapper">
+                <div class="portrait"
+                id="tina">
+                    <h3 class="text-outline">Tina <br> Belcher</h3>
+                    <img class="shadow-lg" 
+                    (click)="maximize('tina')" 
+                    src="/assets/images/bobs-burgers/portraits/Tina_render.png" 
+                    alt="Tina">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
+                        Dolorem, quis numquam rerum laborum esse eos inventore sunt quia.
+                        Non maxime odit excepturi esse illum asperiores corrupti</p>
+                </div>
+                <div class="portrait"
+                id="gene">
+                    <h3 class="text-outline">Gene <br> Belcher</h3>
+                    <img class="shadow-lg gene" 
+                    (click)="maximize('gene')" 
+                    src="/assets/images/bobs-burgers/portraits/Gene_Belcher.png" 
+                    alt="Gene">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                        Dicta quas in consequuntur quos vel eligendi officiis enim dolorem unde deleniti aliquam fuga soluta. 
+                        Sed laboriosam vel voluptatibus nam officiis maiores!</p>
+                </div>
+                <div class="portrait"
+                id="louise">
+                    <h3 class="text-outline">Louise <br> Belcher</h3>
+                    <img class="shadow-lg" 
+                    (click)="maximize('louise')" 
+                    src="/assets/images/bobs-burgers/portraits/Louise_render.png" 
+                    alt="Louise">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                        Dicta quas in consequuntur quos vel eligendi officiis enim dolorem unde deleniti aliquam fuga soluta. 
+                        Sed laboriosam vel voluptatibus nam officiis maiores!</p>
+                </div>
+            </div>
+        </div>
+        <!-- <h2 class="text-outline">click an image to learn about the staff</h2> -->
+    </div>
+
+    <!-- 10 pixel border for style -->
+    <div class="border10 shadow-lg"></div>
+
+    <!-- Last content container -->
+    <div class="bottom-content-container text-right">
+            <div class="content">
+                <h1 class="text-outline">Bring The Kids And Come On Down</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Non maxime odit excepturi esse illum asperiores corrupti, odio quis quia similique iure dolor. Obcaecati, repudiandae repellat dolorem eum vero soluta sapiente vel voluptas qui dolore. Laboriosam et non sit, placeat ipsa ullam quae repellendus laborum animi!</p>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dicta quas in consequuntur quos vel eligendi officiis enim dolorem unde deleniti aliquam fuga soluta, deserunt ipsum tempora eaque dolorum inventore est quod! Molestiae officiis porro error!</p>
+            </div>
+    </div>
+    <div class="border10 shadow"></div>
+    <div class="footer-wrapper">
+        <div class="nav-menu-footer">
+            <!-- add hrefs in when ready -->
+                <a >Home</a>
+                <a >Menu</a>
+                <a >Contact</a>
+        </div>
+        <div class="copyright">
+            &copy; 2019 | Bob's Burgers & Tarell Morris
+        </div>
+    </div>
+</div>
+
+<!-- Spacer for project consistency -->
+<div class="spacer50"></div>
+
+<!-- Footer component -->
+<app-footer></app-footer>

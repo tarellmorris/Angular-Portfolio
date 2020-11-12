@@ -1,0 +1,52 @@
+$folio-font: 'Lato', sans-serif
+$brandDarkGray: rgba(48, 48, 48, 1)
+$brandGreen: #75ff98 
+
+
+#nav-container
+    background: $brandDarkGray
+    padding: 8px 25px
+    font-family: $folio-font
+    border-bottom: 3px solid #75ff9854
+    #brand-wrapper
+        display: flex
+        flex-direction: column
+        justify-content: center
+        height: 55px
+        .navbar-brand
+            margin: 0px
+            padding: 0px
+            margin-right: 10px
+            h1
+                color: $brandGreen 
+                font-size: 22px
+                font-weight: 400
+                margin: 0px
+                padding: 0px
+        #subhead
+            font-size: 16px
+            font-weight: 300
+
+    .navbar-nav
+        height: 51.6px
+        ul 
+            // width: 220px
+            padding: 0px
+            height: 100%
+            align-items: center
+            li 
+                margin: 0px 3px
+                a
+                    padding: 10px 0px
+                    color: #ffffff86
+                    background: rgba(48, 48, 48, 1)
+                    font-weight: 300
+                    border-bottom: 2.5px transparent $brandGreen 
+                    // background: linear-gradient(90deg, rgba(58,180,162,1) 0%, rgba(58,180,162,1) 50%, #75ff98 100%)
+                    &:hover 
+                        border-bottom: 2.5px solid $brandGreen 
+
+.active
+    color: rgba(255, 255, 255, 1) !important
+    border-bottom: 2.5px solid $brandGreen 
+                

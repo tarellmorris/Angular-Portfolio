@@ -1,0 +1,63 @@
+$folio-font: 'Lato', sans-serif
+$bgImage: "/assets/images/backgrounds/programming.jpg"
+$brandGreen: #75ff98 
+$transGreen: #75ff9854 
+
+
+.container
+    display: flex
+    flex-direction: column
+    justify-content: center
+    align-items: center
+    padding: 25px 50px
+    background-image: linear-gradient(rgba(0, 29, 25, 0.9), rgba(0, 0, 0, 0.9)), url($bgImage)
+    background-position: center
+    background-size: cover
+    font-family: $folio-font
+    h1 
+        margin-bottom: 15px
+    form 
+        width: 100%
+        background: transparent
+        .form-control
+            background: #303030
+            color: white
+            border: $transGreen
+            &:hover
+                outline: white
+            &:focus
+                box-shadow: 0 0 0 0.2rem $transGreen
+.row
+    width: 80%
+button 
+    // margin: 25px
+    background: $transGreen
+    color: white
+    border: none
+    &:hover
+        background: $brandGreen
+        color: #303030
+    &:active, &:focus
+        background: $brandGreen
+        color: #303030
+        box-shadow: 0 0 0 0.2rem $transGreen
+
+img 
+    border-radius: 12px
+    margin-bottom: 25px
+
+.spacer
+    height: 120px
+
+@media screen and (max-width: 446px)
+
+    h1 
+        font-size: 2em
+        margin-top: 10px
+    p 
+        font-size: 18px
+    .container 
+        padding: 25px
+        margin: auto
+        height: auto
+        justify-content: flex-start

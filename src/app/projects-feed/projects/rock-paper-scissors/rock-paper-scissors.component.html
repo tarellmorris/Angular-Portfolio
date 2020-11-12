@@ -1,0 +1,79 @@
+<div class="spacer120"></div>
+
+<div @fadeIn class="container shadow-lg">
+    <body>
+        <header>
+            <h1>Rock Paper Scissors</h1>
+        </header>
+        <div class="spacer100"></div>
+        <div @fadeIn *ngIf="!playerWin && !cpuWin" id="gameActive">
+            <div id="scoreCard">
+                <div id="user">Player</div>
+                <div id="comp">Comp</div>
+                <span id="userScore" 
+                    [innerHTML]=userScore>
+                </span> :
+                <span id="compScore"
+                    [innerHTML]=compScore> 0 
+                </span>
+            </div>
+            <div id="result"
+                [innerHTML]=result>
+            </div>
+            <div class="rpsContainer">
+                <div (click)="begin('rock')">
+                    <i id="rock" class="far fa-hand-rock"></i>
+                </div>
+                <div (click)="begin('paper')">
+                    <i id="paper" class="far fa-hand-paper"></i>
+                </div>
+                <div (click)="begin('scissors')">
+                    <i id="scissors" class="far fa-hand-scissors"></i>
+                </div>
+            </div>
+            <div id="instructions"> First to <b>10 POINTS</b> wins</div>
+            <div class="actionMessage">Make your move</div>
+        </div>
+        <div @fadeIn *ngIf="playerWin" id="gameOverPlayerWin">
+            <div id="winMessage">You win!</div>
+            <div id="finalScore">
+                <div id="scoreCard">
+                    <div id="user">Player</div>
+                    <div id="comp">Comp</div>
+                    <span id="userScore" 
+                        [innerHTML]=userScore>
+                    </span> :
+                    <span id="compScore"
+                        [innerHTML]=compScore> 0 
+                    </span>
+                </div>
+            </div>
+            <div id="subMessage">Player has reached <b>10 POINTS</b></div>
+            <button class="btn"
+            (click)="restart()">
+                Play Again?
+            </button>
+        </div>
+        <div @fadeIn *ngIf="cpuWin" id="gameOverCPUWin">
+            <div id="winMessage">You lose!</div>
+            <div id="finalScore">
+                <div id="scoreCard">
+                    <div id="user">Player</div>
+                    <div id="comp">Comp</div>
+                    <span id="userScore" 
+                        [innerHTML]=userScore>
+                    </span> :
+                    <span id="compScore"
+                        [innerHTML]=compScore> 0 
+                    </span>
+                </div>
+            </div>
+            <div id="subMessage">CPU has reached <b>10 POINTS</b></div>
+            <button class="btn"
+            (click)="restart()">
+                Play Again?
+            </button>
+        </div>
+    <div class="spacer100"></div>
+    </body>
+</div>

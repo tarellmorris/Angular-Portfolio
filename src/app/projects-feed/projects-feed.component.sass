@@ -1,0 +1,122 @@
+$folio-font: 'Lato', sans-serif
+$bgImage: "/assets/images/backgrounds/programming.jpg"
+$brandGreen: #75ff98 
+$brandDarkGray: rgba(48, 48, 48, 1)
+$transGreen: #75ff9854 
+
+* 
+    font-family: $folio-font
+#spacer
+    height: 120px
+#intro-banner
+    display: flex
+    flex-direction: column
+    justify-content: center
+    align-items: center
+    height: 175px
+    background: #75ff9854 
+    // padding: 25px 50px
+    margin-bottom: 50px
+    #circle-header-container
+        display: flex
+        justify-content: center
+        align-items: center
+        h1 
+            color: white
+            margin: 0px 25px
+            font-size: 4em
+            line-height: 48px
+            letter-spacing: 1px
+            text-shadow: 2px 2px 4px #5151518f
+            // padding-bottom: 10px
+        .circle 
+            height: 40px
+            width: 40px
+            border-radius: 50px
+            background: #515151cc
+            margin: 0px 10px
+            &:nth-child(2), &:nth-last-child(2)
+                height: 30px
+                width: 30px
+                background: #5151518f
+            &:first-child, &:last-child
+                height: 20px
+                width: 20px
+                background: #5151513d
+
+#project-container
+    margin-bottom: 50px
+    padding: 25px 50px
+    transition: .1s ease-in
+    background: rgb(58,180,162)
+    background-image: linear-gradient(rgba(0, 29, 25, 0.9), rgba(0, 0, 0, 0.9)), url($bgImage)
+    background-position: center
+    background-size: cover
+    font-family: $folio-font
+    .col-md-12
+        display: flex
+        flex-direction: column  
+        justify-content: center
+        align-items: center  
+        #title 
+            color: $brandGreen
+            margin-bottom: 15px
+            &:hover 
+                color: white
+        a 
+            // width: 100%
+            #img-container
+                display: flex
+                flex-direction: column
+                justify-content: center
+                align-items: center
+                img 
+                    border-radius: 12px
+                    max-width: 80%
+                    max-height: 90%
+                    object-fit: cover
+                    margin: 10px 0px
+                    border: 3px solid #75ff9854 
+                    &:hover 
+                        cursor: pointer
+                        border: 3px solid $brandGreen
+
+// Media queries
+@media screen and (max-width: 1250px)
+    #intro-banner
+        #circle-header-container
+            h1 
+                font-size: 3em
+            
+@media screen and (max-width: 990px)
+    #intro-banner
+        padding: 15px 0px
+        height: auto
+        #circle-header-container
+            h1 
+                font-size: 5.5vw
+            .circle 
+                display: none
+                &:nth-child(2), &:nth-last-child(2)
+                    display: none
+                &:first-child, &:last-child
+                    display: none
+    img 
+       max-width: 100% !important
+    #project-container
+        padding: 25px
+
+@media screen and (max-width: 510px)
+    #intro-banner
+        margin: 25px 0px
+        padding: 15px 0px
+        #circle-header-container
+            h1 
+                font-size: 8vw
+    h1 
+        font-size: 2em
+    p 
+        font-size: 18px
+
+
+

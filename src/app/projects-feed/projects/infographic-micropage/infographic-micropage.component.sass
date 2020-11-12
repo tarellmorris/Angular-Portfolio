@@ -1,0 +1,142 @@
+@import url('https://fonts.googleapis.com/css?family=Quicksand|Rubik&display=swap')
+
+$rubik: Rubik, Quicksand, -apple-system, system-ui, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif
+$quicksand: Quicksand, -apple-system, system-ui, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif
+$blue-purple: #404897
+$blue: #3572B1
+$purple: #4C1B94
+$turqoise: #12A6A1
+$seafoam: #1ED5D0
+$sky-blue: #01C2F3
+
+*
+    font-family: $rubik
+
+#spacer
+    height: 120px
+
+#infographic-container 
+    padding: 0px
+    margin-bottom: 50px
+    #title-container 
+        background-image: linear-gradient(to right, #4C1B94, #404897, #3572B1)
+        color: white
+        display: flex
+        flex-direction: column
+        justify-content: center
+        align-items: flex-start
+        padding: 50px 30px
+        h1 
+            font-family: $quicksand
+            color: white
+            margin: 0px
+            font-weight: 600
+        h2 
+            margin: 0px
+        h3 
+            margin: 0px
+
+    #pro-container 
+        display: flex
+        flex-direction: column
+        justify-content: flex-start
+        align-items: center
+        padding: 25px 50px
+        background-color: #fafafa
+        h2 
+            color: #404897
+            font-size: 2.5vh
+            margin-bottom: 25px
+        #pro-wrapper 
+            display: flex
+            height: auto
+            width: 100%
+            justify-content: space-evenly
+            margin-top: 15px
+            .badge-container
+                display: flex
+                flex-direction: column
+                justify-content: space-between
+                p 
+                    color: #12A6A1
+                    font-weight: 600
+                    font-size: 2.1vh
+                    transition: all .1s ease-in-out
+
+                .gradient-bg 
+                    display: flex
+                    justify-content: center
+                    align-items: center
+                    border: transparent
+                    background-image: linear-gradient(to right, $purple, $blue-purple, $blue, $seafoam)
+                    border-radius: 150px
+                    transition: 0.2s ease
+                    height: 190px
+                    width: 190px
+                    &:hover 
+                        cursor: pointer
+                        transform: scale(1.01) 
+                    &:active 
+                        transform: translateY(3px) scale(0.99)
+                    #pro1 
+                        content: url(/assets/images/pro-pictures/dr-bart.webp)
+                    #pro2 
+                        content: url(/assets/images/pro-pictures/amy-pyke.webp)
+                    #pro3 
+                        content: url(/assets/images/pro-pictures/natali-lenning.png)
+                    #pro4 
+                        content: url(/assets/images/pro-pictures/natasa-dugandzic.png)
+                    .image 
+                        max-height: 180px
+                        max-width: 180px
+                        height: auto
+                        width: auto
+                        border: transparent
+                        border-radius: 150px
+
+
+    #full-block-container 
+        height: 35vh
+        width: 100%
+        background-color: white
+        display: flex
+        justify-content: center
+        align-items: center
+        #pro-block 
+            height: 100%
+            width: 100%
+            background-repeat: no-repeat
+            background-position: center
+            background-size: contain
+            background-image: url(/assets/images/blocks/dr-bart-block.png)
+    .logo-banner 
+        height: 8vw
+        width: 100%
+        background-color: white
+        padding: 15px
+        display: flex
+        justify-content: flex-end
+        align-items: flex-end
+        background-color: #fafafa
+        svg 
+            width: 20%
+            padding: 1%
+            .outside_dotsGroup, .healthcareGroup 
+                fill: #01C2F3     
+            .definitiveGroup, .inside_dotsGroup 
+                fill: #4C1B94
+              
+    .gradient-border 
+        height: 10px
+        width: 100%
+        background-image: linear-gradient(to right, $purple, $blue-purple, $blue, $seafoam)
+
+
+@media screen and ( max-width: 600px )
+
+    #pro-wrapper
+        display: flex
+        flex-direction: column
+        align-items: center
+        p
+            margin-top: 10px

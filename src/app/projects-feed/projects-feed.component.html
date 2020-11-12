@@ -1,0 +1,38 @@
+<div id="spacer"></div>
+
+<div id="intro-banner" 
+class="shadow-lg">
+    <div id="circle-header-container">
+        <div class="circle shadow-lg"></div>
+        <div class="circle shadow-lg"></div>
+        <div class="circle shadow-lg"></div>
+        <h1 class="text-center">Active Projects and Microsites</h1>
+        <div class="circle shadow-lg"></div>
+        <div class="circle shadow-lg"></div>
+        <div class="circle shadow-lg"></div>   
+    </div>
+</div>
+
+<div @fadeIn
+*ngFor="let project of projects" 
+class="container shadow-lg" 
+id="project-container">
+    <div class="row">
+        <div class="col-md-12 text-center">
+            <a [href]="project.projectLink">
+                <h1 id="title">{{ project.projectName }}</h1>
+            </a>
+            <p>{{ project.projectDesc }}</p>
+            <a routerLinkActive="active"
+            [routerLink]="project.projectLink">
+                <div id="img-container">
+                    <img class="img-responsive shadow-lg"
+                    [src]="project.projectImage" 
+                    [alt]="project.projectName">
+                </div>
+            </a>
+        </div>
+    </div>
+</div>
+<app-footer></app-footer>
+
